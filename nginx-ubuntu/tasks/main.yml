@@ -1,0 +1,12 @@
+---
+# tasks for installing nginx on ubuntu
+- name: install nginx
+  apt: name=nginx state=latest
+- name: write the index file
+  template:
+    src: index.html
+    dest: /usr/share/nginx/html/index.html
+- name: start nginx
+  service:
+    name: nginx
+    state: started

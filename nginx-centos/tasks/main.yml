@@ -1,0 +1,16 @@
+---
+# tasks for installing nginx on centos
+- name: install yum package epel
+  yum:
+    name: epel-release
+    state: present
+- name: install nginx
+  yum: name=nginx state=present
+- name: write the index file
+  template:
+    src: index.html
+    dest: /usr/share/nginx/html/index.html
+- name: start nginx
+  service:
+    name: nginx
+    state: started

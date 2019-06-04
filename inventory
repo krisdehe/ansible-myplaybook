@@ -1,0 +1,5 @@
+[centos]
+170.75.163.30 ansible_ssh_user=centos ansible_ssh_private=/home/formation/.ssh/id_rsa
+
+[ubuntu]
+158.69.33.222 ansible_ssh_user=ubuntu ansible_ssh_private=/home/formation/.ssh/id_rsa
